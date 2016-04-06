@@ -1,0 +1,13 @@
+# Docker VM start and env
+alias dmct="docker-machine create --driver virtualbox"
+alias dmst="docker-machine start"
+alias dmrm="docker-machine rm"
+alias dmrs="docker-machine restart"
+alias dmenv="docker-machine env"
+alias dmls="docker-machine ls"
+dmsetup() {
+	dmct $1
+	eval "$(dmenv $1)"
+}
+dockermachine=$(docker-machine ls | grep Running | head -n 1 | awk '{print $1}')
+if [[ ! -z "$dockermachine" ]]; then eval "$(docker-machine env $dockermachine)"; fi
