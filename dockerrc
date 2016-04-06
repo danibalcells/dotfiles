@@ -1,0 +1,32 @@
+# Get latest container ID
+alias dl="docker ps -l -q"
+# Get container process
+alias dps="docker ps"
+# Get process included stop container
+alias dpa="docker ps -a"
+# Get images
+alias di="docker images"
+# Get container IP
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+# Run daemonized container, e.g., $dkd base /bin/echo hello
+alias dkd="docker run -d -it --net=host"
+# Run interactive container, e.g., $dki base /bin/bash
+alias dkr="docker run -it --net=host"
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dex="docker exec -it"
+# Remove containers
+alias drm="docker rm -v"
+
+# Docker VM start and env
+alias dmct="docker-machine create --driver virtualbox"
+alias dmst="docker-machine start"
+alias dmrm="docker-machine rm"
+alias dmrs="docker-machine restart"
+alias dmenv="docker-machine env"
+alias dmls="docker-machine ls"
+dmsetup() {
+	dmct $1
+	eval "$(dmenv $1)"
+}
+dockermachine=$(docker-machine ls | grep Running | head -n 1 | awk '{print $1}')
+if [[ ! -z "$dockermachine" ]]; then eval "$(docker-machine env $dockermachine)"; fi
