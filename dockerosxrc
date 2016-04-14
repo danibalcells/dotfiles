@@ -5,6 +5,8 @@ alias dmrm="docker-machine rm"
 alias dmrs="docker-machine restart"
 alias dmenv="docker-machine env"
 alias dmls="docker-machine ls"
+alias dm="docker-machine"
+alias dmip="docker-machine ip"
 dmsetup() {
 	dmct $1
 	eval "$(dmenv $1)"
