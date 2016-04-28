@@ -11,5 +11,7 @@ dmsetup() {
 	dmct $1
 	eval "$(dmenv $1)"
 }
-dockermachine=$(docker-machine ls | grep Running | head -n 1 | awk '{print $1}')
-if [[ ! -z "$dockermachine" ]]; then eval "$(docker-machine env $dockermachine)"; fi
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Volumes/NeoData/.docker/machines/dvm"
+export DOCKER_MACHINE_NAME="dvm"
