@@ -4,8 +4,11 @@
 	email = dbalcells@gmail.com
 [push]
 	default = matching
-[credential]
-	helper = osxkeychain
+[credential "bitbucket.org"]
+	username = danielbalcells
+	helper = cache --timeout 30000
+[credential "pdihub"]
+	username = b.dbe
 	helper = cache --timeout 30000
 [core]
 	editor = vim
