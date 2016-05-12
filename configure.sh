@@ -1,6 +1,6 @@
 #! /bin/bash
 # Make aliases for .dotfiles
-repo_path=~/.dotfiles
+if [[ -z "$1" ]]; then repo_path=~/.dotfiles; else repo_path=$1; fi
 
 
 # Make a copy of the sourcing file
