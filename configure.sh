@@ -1,14 +1,14 @@
 #! /bin/bash
 # Make aliases for .dotfiles
-repo_path=~/.dotfiles
-
+if [[ -z "$1" ]]; then repo_path=~/.dotfiles; else repo_path=$1; fi
+if [[ -z "$2" ]]; then link_path=~; else link_path=$2; fi
 
 # Make a copy of the sourcing file
 # Edit this individually for each host
-cp $repo_path/sources ~/.bash_profile
-ln -s -i ~/.bash_profile ~/.bashrc
+cp $repo_path/sources $link_path/.bash_profile
+ln -s -f $link_path/.bash_profile $link_path/.bashrc
 
 # Make symlinks for non-bash configuration files
-ln -s -i $repo_path/vimrc ~/.vimrc
-ln -s -i $repo_path/screenrc ~/.screenrc
-ln -s -i $repo_path/gitconfig ~/.gitconfig
+ln -s -f $repo_path/vimrc $link_path/.vimrc
+ln -s -f $repo_path/screenrc $link_path/.screenrc
+ln -s -f $repo_path/gitconfig $link_path/.gitconfig
