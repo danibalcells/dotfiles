@@ -62,8 +62,20 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+function git_status_prompt(){
+	git_status="$(git status 2>&1)"
+	if [[ ! -z "$(echo $git_status | grep fatal)" ]]; then
+		echo -e '$'
+	elif [[ ! -z "$(echo $git_status | grep clean)" ]]; then
+		echo -e '\033[0;32m$\033[0m'
+	else
+		echo -e '\033[0;31m$\033[0m'
+	fi
+}
+
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[[01;32m\]\u@\h\[[00m\]:\[[01;34m\]\W\[[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[[01;32m\]\u@\h\[[00m\]:\[[01;34m\]\W\[[00m\]$(git_status_prompt) '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
