@@ -67,7 +67,7 @@ function git_status_prompt(){
 	if [[ ! -z "$(echo $git_status | grep fatal)" ]]; then
 		echo -e '$'
 	elif [[ ! -z "$(echo $git_status | grep clean | grep ahead)" ]]; then
-		echo -e '\033[0;33m$\033[0m'
+		echo -e '\033[0;34m$\033[0m'
 	elif [[ ! -z "$(echo $git_status | grep clean)" ]]; then
 		echo -e '\033[0;32m$\033[0m'
 	else
