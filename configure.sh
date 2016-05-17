@@ -13,3 +13,6 @@ ln -s -f $link_path/.bashrc $link_path/.bash_profile
 ln -s -f $repo_path/vimrc $link_path/.vimrc
 ln -s -f $repo_path/screenrc $link_path/.screenrc
 ln -s -f $repo_path/gitconfig $link_path/.gitconfig
+
+# Source new stuff
+source $link_path/.bashrc
