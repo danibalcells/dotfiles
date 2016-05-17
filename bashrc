@@ -124,3 +124,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# iTerm shell integration
+source ~/.dotfiles/iterm2_shell_integration.`basename $SHELL`
