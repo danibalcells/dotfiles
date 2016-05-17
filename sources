@@ -2,6 +2,6 @@
 source ~/.dotfiles/bashrc
 source ~/.dotfiles/bash_aliases
 source ~/.dotfiles/dockerrc
-source ~/.dotfiles/dockerosxrc
+#source ~/.dotfiles/dockerosxrc
 
 
