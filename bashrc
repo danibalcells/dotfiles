@@ -128,4 +128,4 @@ fi
 source ~/.dotfiles/iterm2_shell_integration.`basename $SHELL`
 
 # Set tab width
-tabs 8
+tabs 4
