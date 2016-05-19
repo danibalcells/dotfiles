@@ -1,11 +1,10 @@
 "Noice colorscheme
 colorscheme desert
 
-"Indentation
-filetype plugin indent on
-
 "Syntax highlighting
 syntax on
+
+"Tab width
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab 
 
 "Preserve visual block after indentation
