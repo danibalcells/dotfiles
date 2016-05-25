@@ -2,5 +2,4 @@ source ~/.dotfiles/bashrc
 source ~/.dotfiles/bash_aliases
 source ~/.dotfiles/dockerrc
 source ~/.dotfiles/dockerosxrc
-
-
+source ~/.dotfiles/iterm2_shell_integration.bash

@@ -124,5 +124,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# iTerm shell integration
-source ~/.dotfiles/iterm2_shell_integration.`basename $SHELL`
+# iTerm shell integration- this is now sourced in ~/.sources as it screws up linux consoles
+#source ~/.dotfiles/iterm2_shell_integration.`basename $SHELL`
