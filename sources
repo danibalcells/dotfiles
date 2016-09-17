@@ -5,7 +5,6 @@ source ~/.dotfiles/dockerrc
 source ~/.dotfiles/dockerosxrc
 # Only source iTerm Shell Integration if using iTerm
 if [[ ! -z "$(echo $TERM_PROGRAM | grep 'iTerm')" ]]; then
-    echo "Hi"
     source ~/.dotfiles/iterm2_shell_integration.bash
 fi
 
