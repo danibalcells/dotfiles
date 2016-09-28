@@ -6,8 +6,7 @@ syntax on
 
 "Tab width
 filetype plugin indent on
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab 
-autocmd Filetype yaml setlocal expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 
 "Preserve visual block after indentation
 vnoremap > >gv

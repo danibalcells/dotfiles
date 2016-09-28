@@ -5,7 +5,7 @@
 [push]
 	default = matching
 [credential "bitbucket.org"]
-	#username = danielbalcells
+	username = danielbalcells
 	helper = cache --timeout 30000
 [credential "pdihub.hi.inet"]
 	#username = b.dbe
