@@ -7,7 +7,7 @@ function watermelogin() {
 	if [[ "$local_status" -ne "0" ]]; then
 		ssh -p 2233 themissingwatermelon.com
 	else
-		ssh -p 2233 192.168.1.36
+		ssh -p 2233 watermelon.local
 	fi	
 }
 
