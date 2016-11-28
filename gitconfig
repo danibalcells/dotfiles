@@ -4,6 +4,9 @@
 	email = dbalcells@gmail.com
 [push]
 	default = matching
+[credential "github.com"]
+	username = danielbalcells
+	helper = cache --timeout 30000
 [credential "bitbucket.org"]
 	username = danielbalcells
 	helper = cache --timeout 30000
