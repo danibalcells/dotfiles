@@ -16,6 +16,11 @@ Plugin 'VundleVim/Vundle.vim'
 " Jedi-vim, awesome code completion for python
 Plugin 'davidhalter/jedi-vim'
 
+" YouCompleteMe, auto-completion
+Bundle 'Valloric/YouCompleteMe'
+" Ensure autocomplete window goes away when done
+let g:ycm_autoclose_preview_window_after_completion=1
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -65,4 +70,25 @@ vnoremap < <gv
 "Show at least 15 lines above/below cursor
 set scrolloff=15
 
+"Correct PEP8 indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+" Remap leader key
+let mapleader = "-"
+
+" Fix backspace issues
+set backspace=2
