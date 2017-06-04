@@ -14,12 +14,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Jedi-vim, awesome code completion for python
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 
 " YouCompleteMe, auto-completion
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 " Ensure autocomplete window goes away when done
-let g:ycm_autoclose_preview_window_after_completion=1
+"let g:ycm_autoclose_preview_window_after_completion=1
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
