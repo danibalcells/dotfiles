@@ -117,3 +117,26 @@ fi
 
 # Set tab width
 tabs 4
+
+# Quick function to rename sessions in iTerm
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+
+# Function to start a screen session and rename iTerm window with the same name
+function scr {
+    name=$1
+    # If there is already a session with this name, reattach
+    existing_session=$(screen -ls \
+        | grep -v 'screens on'\
+        | grep -v 'Sockets in'\
+        | grep $name \
+        | awk '{print $1}')
+    if [ ! -z "$existing_session" ]; then
+        title $name
+        screen -dr $existing_session
+    else
+        title $name
+        screen -S $name
+    fi
+}
