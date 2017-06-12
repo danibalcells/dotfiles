@@ -15,5 +15,8 @@ ln -s $force $repo_path/vimrc $link_path/.vimrc
 ln -s $force $repo_path/screenrc $link_path/.screenrc
 ln -s $force $repo_path/gitconfig $link_path/.gitconfig
 
+# Create machine-specific file -to be ignored in repo- if it doesn't exist already
+touch $repo_path/machine_specific_bashrc
+
 # Source new stuff
 source $link_path/.bashrc

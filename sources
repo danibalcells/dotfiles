@@ -3,6 +3,7 @@ source ~/.dotfiles/bashrc
 source ~/.dotfiles/bash_aliases
 source ~/.dotfiles/dockerrc
 source ~/.dotfiles/dockerosxrc
+source ~/.dotfiles/machine_specific_bashrc
 # Only source iTerm Shell Integration if using iTerm
 if [[ ! -z "$(echo $TERM_PROGRAM | grep 'iTerm')" ]]; then
     source ~/.dotfiles/iterm2_shell_integration.bash
