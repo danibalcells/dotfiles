@@ -1,17 +1,17 @@
 " Vundle configuration lines. Taken from the README in
 " https://github.com/VundleVim/Vundle.vim
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 
 " Jedi-vim, awesome code completion for python
 "Plugin 'davidhalter/jedi-vim'
@@ -39,8 +39,8 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+"call vundle#end()            " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
