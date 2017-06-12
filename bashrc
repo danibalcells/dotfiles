@@ -137,9 +137,11 @@ function scr {
         screen -dr $existing_session
     else
         title $name
-        screen -S $name
+        screen -S $name bash -c 'export ITERM_TITLE='$name'; bash -i'
     fi
 }
+if [ ! -z "$ITERM_TITLE" ]; then title $ITERM_TITLE; fi
+
 # Alias for uploading a file to transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
