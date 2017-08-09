@@ -126,6 +126,7 @@ function scr {
     name=$1
     # If there is already a session with this name, reattach
     existing_session=$(screen -ls \
+        | grep -v 'No Sockets found'\
         | grep -v 'screens on'\
         | grep -v 'Sockets in'\
         | grep $name \
