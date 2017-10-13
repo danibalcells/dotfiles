@@ -19,4 +19,4 @@ ln -s $force $repo_path/gitconfig $link_path/.gitconfig
 touch $repo_path/machine_specific_bashrc
 
 # Source new stuff
-source $link_path/.sourcesc
+source $link_path/.sources
