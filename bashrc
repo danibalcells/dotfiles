@@ -1,8 +1,8 @@
 export CLICOLOR=1
 export PYTHON_DEFAULT_VERSION="anaconda2"
-export LANG=es_ES.UTF-8
-export LC_CTYPE=es_ES.UTF-8
-export LC_ALL=es_ES.UTF-8
+#export LANG=es_ES.UTF-8
+#export LC_CTYPE=es_ES.UTF-8
+#export LC_ALL=es_ES.UTF-8
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
