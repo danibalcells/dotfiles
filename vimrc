@@ -35,6 +35,7 @@ Plugin 'vim-airline/vim-airline'
 
 " Fuzzy file search
 Plugin 'junegunn/fzf', { 'dir': '~/.dotfiles/fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 " Intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
@@ -127,3 +128,7 @@ let g:airline#extensions#tabline#enabled = 1
 " --------- NERDCOMMENTER -----
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+
+
+" --------- FZF ---------------
+map ; :Files<CR>
