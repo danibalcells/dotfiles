@@ -58,6 +58,8 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+export TERM=xterm-256color
+
 function git_status_prompt(){
 	git_status="$(git status 2>&1)"
 	if [[ ! -z "$(echo $git_status | grep fatal)" ]]; then
