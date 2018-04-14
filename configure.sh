@@ -22,6 +22,8 @@ touch $repo_path/machine_specific_bashrc
 source $link_path/.sources
 
 # Install Vundle
-mkdir $repo_path/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git $repo_path/bundle/Vundle.vim
-vim +PluginInstall +qall
+mkdir -p $repo_path/bundle
+if [ ! -d "$repo_path/bundle/Vundle.vim" ] ; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $repo_path/bundle/Vundle.vim
+fi
+vim +silent +PluginInstall +qall
