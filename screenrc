@@ -1,5 +1,11 @@
+# Set iTerm window title via screen name
 termcapinfo xterm* ti@:te@
 termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 #defhstatus "screen ^E (^Et) | $USER@^EH"
 hardstatus off
+
+# Use full-color term inside screen
 term screen-256color
+
+# Remap screen command key to ctrl+x, so ctrl+a can be used by bash
+escape ^Xx
