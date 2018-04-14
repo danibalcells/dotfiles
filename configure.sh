@@ -20,3 +20,8 @@ touch $repo_path/machine_specific_bashrc
 
 # Source new stuff
 source $link_path/.sources
+
+# Install Vundle
+mkdir $repo_path/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git $repo_path/bundle/Vundle.vim
+vim +PluginInstall +qall
