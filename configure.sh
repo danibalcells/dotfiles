@@ -23,7 +23,7 @@ source $link_path/.sources
 
 #Install vim colorschemes
 mkdir -p $link_path/.vim
-ln -s $force $repo_path/vim_colors $link_path/.vim/colors
+ln -s -h $force $repo_path/vim_colors $link_path/.vim/colors
 
 # Install Vundle
 mkdir -p $repo_path/bundle
@@ -39,4 +39,4 @@ powerline_path=$(pip show powerline-status | grep Location | awk '{print $2}')
 powerline_bash=$powerline_path/powerline/bindings/bash/powerline.sh
 ln -s $force $powerline_bash $repo_path/powerline.sh
 mkdir -p $link_path/.config
-ln -s $force $repo_path/powerline_config_files $link_path/.config/powerline
+ln -s -h $force $repo_path/powerline_config_files $link_path/.config/powerline
