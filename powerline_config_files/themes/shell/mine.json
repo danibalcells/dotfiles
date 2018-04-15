@@ -1,5 +1,7 @@
 {
     "name": "mine",
+    "spaces": 0,
+    "outer_padding":1,
 	"segments": {
 		"left": [
 			{
