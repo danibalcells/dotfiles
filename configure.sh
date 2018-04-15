@@ -21,13 +21,17 @@ touch $repo_path/machine_specific_bashrc
 # Source new stuff
 source $link_path/.sources
 
+#Install vim colorschemes
+mkdir -p $link_path/.vim
+ln -s $force $repo_path/vim_colors $link_path/.vim/colors
+
 # Install Vundle
 mkdir -p $repo_path/bundle
 if [ ! -d "$repo_path/bundle/Vundle.vim" ] ; then
     git clone https://github.com/VundleVim/Vundle.vim.git \
         $repo_path/bundle/Vundle.vim
 fi
-vim +silent +PluginInstall +qall
+vim +silent! +PluginInstall +qall
 
 # Install Powerline
 pip install --user git+https://github.com/danielbalcells/powerline.git 
