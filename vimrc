@@ -40,6 +40,9 @@ Plugin 'junegunn/fzf.vim'
 " Intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
 
+" Cool colorscheme
+Plugin 'crusoexia/vim-monokai'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,7 +78,8 @@ set number         " show line numbers
 set cursorline     " highlight current line
 
 "Noice colorscheme
-colorscheme desert
+" colorscheme desert
+colorscheme monokai
 
 "Syntax highlighting
 syntax on
