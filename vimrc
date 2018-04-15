@@ -40,6 +40,9 @@ Plugin 'junegunn/fzf.vim'
 " Intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
 
+" Tag bar
+Plugin 'git://github.com/majutsushi/tagbar'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -133,3 +136,8 @@ let g:NERDSpaceDelims = 1
 
 " --------- FZF ---------------
 map ; :Files<CR>
+
+
+" --------- Tagbar ---------------
+nmap <leader>tt :TagbarToggle<CR>
+nmap <leader>tr :TagbarOpen fj<CR>
