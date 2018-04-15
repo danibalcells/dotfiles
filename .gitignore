@@ -1,3 +1,4 @@
 .*
 machine_specific_bashrc
 bundle*
+powerline.sh

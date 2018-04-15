@@ -1,8 +1,7 @@
 export CLICOLOR=1
 export PYTHON_DEFAULT_VERSION="anaconda2"
-#export LANG=es_ES.UTF-8
-#export LC_CTYPE=es_ES.UTF-8
-#export LC_ALL=es_ES.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -146,3 +145,15 @@ if [ ! -z "$ITERM_TITLE" ]; then title $ITERM_TITLE; fi
 # Alias for uploading a file to transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+
+# Use Powerline
+if [ -d "$HOME/Library/Python/2.7/bin" ]; then
+    PATH="$PATH:$HOME/Library/Python/2.7/bin"
+fi
+
+if [[ ! -z $(which powerline-daemon) ]]; then
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . $HOME/.dotfiles/powerline.sh
+fi

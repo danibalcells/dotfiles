@@ -1,0 +1,34 @@
+{
+    "name": "mine",
+	"segments": {
+		"left": [
+			{
+				"function": "powerline.segments.common.env.virtualenv"
+			},
+			{
+				"function": "powerline.segments.common.env.user"
+			},
+			{
+                "type": "function",
+				"function": "powerline.segments.common.net.hostname",
+                "args": {"only_if_ssh": "False", "exclude_domain": "False"},
+                "before":""
+			},
+			{
+				"function": "powerline.segments.common.env.virtualenv"
+			},
+			{
+				"function": "powerline.segments.shell.cwd",
+                "args": {
+                    "dir_limit_depth":3, 
+                    "dir_shorten_len":2,
+                    "use_path_separator":"True",
+                    "ellipsis":"None"}
+			},
+			{
+				"function": "powerline.segments.common.vcs.branch",
+                "args":{"status_colors":"True"}
+			}
+		]
+	}
+}
