@@ -147,6 +147,9 @@ transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 # Use Powerline
+if [ -d "$HOME/Library/Python/3.6/bin" ]; then
+    PATH="$PATH:$HOME/Library/Python/3.6/bin"
+fi
 if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$PATH:$HOME/Library/Python/2.7/bin"
 fi
