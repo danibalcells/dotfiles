@@ -16,3 +16,5 @@ function gitclonehere() {
 	git init
 	git remote add origin $1
 }
+
+alias tm="tmux new-session -AD -s"

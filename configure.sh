@@ -14,6 +14,7 @@ ln -s $force $link_path/.bashrc $link_path/.bash_profile
 ln -s $force $repo_path/vimrc $link_path/.vimrc
 ln -s $force $repo_path/screenrc $link_path/.screenrc
 ln -s $force $repo_path/gitconfig $link_path/.gitconfig
+ln -s $force $repo_path/tmux.conf $link_path/.tmux.conf
 
 # Create machine-specific file -to be ignored in repo- if it doesn't exist already
 touch $repo_path/machine_specific_bashrc
