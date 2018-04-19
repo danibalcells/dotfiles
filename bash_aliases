@@ -18,3 +18,8 @@ function gitclonehere() {
 }
 
 alias tm="tmux new-session -AD -s"
+
+function tt(){
+    tmux rename-window $1
+    tmux rename-session $1
+}
