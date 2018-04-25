@@ -43,6 +43,9 @@ Plugin 'scrooloose/nerdcommenter'
 " Tag bar
 Plugin 'git://github.com/majutsushi/tagbar'
 
+" Solidity syntax highlighting
+Plugin 'git://github.com/tomlion/vim-solidity'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
