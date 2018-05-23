@@ -127,6 +127,11 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" automatically leave insert mode after 'updatetime' milliseconds of inaction
+au CursorHoldI * stopinsert
+" set 'updatetime' to 15 seconds when in insert mode
+" au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
+" au InsertLeave * let &updatetime=updaterestore
 " ---------- AIRLINE ----------
 set laststatus=2
 let g:airline_powerline_fonts = 1  " nice fonts
