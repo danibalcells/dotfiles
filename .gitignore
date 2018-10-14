@@ -1,5 +1,6 @@
 .*
 machine_specific_bashrc
+machine_specific_zshrc
 bundle*
 powerline.sh
 zsh/custom/themes

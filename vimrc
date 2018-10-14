@@ -49,6 +49,8 @@ Plugin 'git://github.com/tomlion/vim-solidity'
 " PEP-8 indentation
 Plugin 'Vimjas/vim-python-pep8-indent'
 
+Plugin 'git://github.com/skielbasa/vim-material-monokai'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -85,7 +87,9 @@ set cursorline     " highlight current line
 
 "Noice colorscheme
 " colorscheme desert
-colorscheme monokai
+set background=dark
+set termguicolors
+colorscheme material-monokai
 
 "Syntax highlighting
 syntax on
