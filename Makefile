@@ -1,6 +1,7 @@
 FORCE=-i
 REPO_PATH=$(HOME)/.dotfiles
 LINK_PATH=$(HOME)
+ZSH_CUSTOM=$(REPO_PATH)/zsh/custom
 
 symlinks:
 	# Make a copy of the sourcing file
@@ -57,7 +58,9 @@ zsh-symlink:
 zsh-plugins:
 	mkdir -p ./zsh/custom/themes
 	mkdir -p ./zsh/custom/plugins
-	git clone https://github.com/bhilburn/powerlevel9k.git ./zsh/custom/themes/powerlevel9k
+	./clone_if_not_exists.sh https://github.com/bhilburn/powerlevel9k.git $(ZSH_CUSTOM)/themes/powerlevel9k
+	./clone_if_not_exists.sh https://github.com/zsh-users/zsh-autosuggestions $(ZSH_CUSTOM)/plugins/zsh-autosuggestions
+	./clone_if_not_exists.sh https://github.com/zsh-users/zsh-syntax-highlighting.git $(ZSH_CUSTOM)/plugins/zsh-syntax-highlighting
 .PHONY: zsh-plugins
 
 zsh: oh-my-zsh zsh-symlink zsh-plugins
