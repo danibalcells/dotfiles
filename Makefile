@@ -46,4 +46,20 @@ powerline:
 	ln -s -h $(FORCE) $(REPO_PATH)/powerline_config_files $(LINK_PATH)/.config/powerline
 .PHONY: powerline
 
+oh-my-zsh:
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+.PHONY: oh-my-zsh
+
+zsh-symlink:
+	ln -s $(FORCE) $(REPO_PATH)/zsh/zshrc $(LINK_PATH)/.zshrc
+.PHONY: zsh-symlink
+
+zsh-plugins:
+	mkdir -p ./zsh/custom/themes
+	mkdir -p ./zsh/custom/plugins
+	git clone https://github.com/bhilburn/powerlevel9k.git ./zsh/custom/themes/powerlevel9k
+.PHONY: zsh-plugins
+
+zsh: oh-my-zsh zsh-symlink zsh-plugins
+
 all: symlinks machine-specific vundle vim-colorschemes vim-plugins powerline

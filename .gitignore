@@ -2,3 +2,5 @@
 machine_specific_bashrc
 bundle*
 powerline.sh
+zsh/custom/themes
+zsh/custom/plugins
