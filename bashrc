@@ -81,26 +81,6 @@ fi
 unset color_prompt force_color_prompt
 
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-alias lla='ls -lahtr'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -121,30 +101,6 @@ tabs 4
 function title {
     echo -ne "\033]0;"$*"\007"
 }
-
-# Function to start a screen session and rename iTerm window with the same name
-function scr {
-    name=$1
-    # If there is already a session with this name, reattach
-    existing_session=$(screen -ls \
-        | grep -v 'No Sockets found'\
-        | grep -v 'screens on'\
-        | grep -v 'Sockets in'\
-        | grep $name \
-        | awk '{print $1}')
-    if [ ! -z "$existing_session" ]; then
-        title $name
-        screen -dr $existing_session
-    else
-        title $name
-        screen -S $name bash -c 'export ITERM_TITLE='$name'; bash -i'
-    fi
-}
-if [ ! -z "$ITERM_TITLE" ]; then title $ITERM_TITLE; fi
-
-# Alias for uploading a file to transfer.sh
-transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 # Use Powerline
 if [ -d "$HOME/Library/Python/3.6/bin" ]; then

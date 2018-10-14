@@ -1,5 +1,5 @@
 #! /bin/bash
 source ~/.dotfiles/bashrc
-source ~/.dotfiles/bash_aliases
+source ~/.dotfiles/shell_aliases
 source ~/.dotfiles/dockerrc
 source ~/.dotfiles/machine_specific_bashrc
