@@ -522,13 +522,13 @@ MB - LWS:Restore Window Arrangement</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.36297607421875</real>
+				<real>0.267608642578125</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.32481939429123979</real>
+				<real>0.24050744793655876</real>
 				<key>Red Component</key>
-				<real>0.24214651435613632</real>
+				<real>0.1817881646566093</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>

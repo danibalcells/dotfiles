@@ -86,10 +86,10 @@ set number         " show line numbers
 set cursorline     " highlight current line
 
 "Noice colorscheme
-" colorscheme desert
-set background=dark
 set termguicolors
 colorscheme material-monokai
+set background=dark
+highlight Normal guibg=black guifg=white
 
 "Syntax highlighting
 syntax on
