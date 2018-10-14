@@ -519,12 +519,16 @@ MB - LWS:Restore Window Arrangement</string>
 			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.40253299474716187</real>
+				<real>0.36297607421875</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.35616019368171692</real>
+				<real>0.32481939429123979</real>
 				<key>Red Component</key>
-				<real>0.26286587119102478</real>
+				<real>0.24214651435613632</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -609,12 +613,16 @@ MB - LWS:Restore Window Arrangement</string>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.99871528148651123</real>
+				<real>0.794952392578125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.7149810791015625</real>
+				<real>0.59887739874445123</real>
 				<key>Red Component</key>
-				<real>0.215079665184021</real>
+				<real>0.16020105360075831</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -645,12 +653,16 @@ MB - LWS:Restore Window Arrangement</string>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.72321081161499023</real>
+				<real>0.706390380859375</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.69167852401733398</real>
+				<real>0.67605564943712593</real>
 				<key>Red Component</key>
-				<real>0.63061976432800293</real>
+				<real>0.61538613913580775</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -665,12 +677,16 @@ MB - LWS:Restore Window Arrangement</string>
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.16608485579490662</real>
+				<real>0.123565673828125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14745020866394043</real>
+				<real>0.10817777245768218</real>
 				<key>Red Component</key>
-				<real>0.11278382688760757</real>
+				<real>0.077402008697390556</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -2099,7 +2115,7 @@ MB - LWS:Restore Window Arrangement</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/daniel/.dotfiles</string>
+	<string>/Users/daniel/.dotfiles/iterm</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>SUAutomaticallyUpdate</key>
