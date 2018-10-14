@@ -46,9 +46,6 @@ Plugin 'git://github.com/majutsushi/tagbar'
 " Solidity syntax highlighting
 Plugin 'git://github.com/tomlion/vim-solidity'
 
-" Debugger
-Plugin 'vim-vdebug/vdebug'
-
 " PEP-8 indentation
 Plugin 'Vimjas/vim-python-pep8-indent'
 
