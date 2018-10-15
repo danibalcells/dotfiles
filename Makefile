@@ -17,7 +17,7 @@ symlinks:
 	ln -s $(FORCE) $(REPO_PATH)/tmux.conf $(LINK_PATH)/.tmux.conf
 .PHONY: symlinks
 
-machine-specific:
+bash-machine-specific:
 	touch $(REPO_PATH)/machine_specific_bashrc
 .PHONY: machine-specific
 
@@ -48,7 +48,7 @@ powerline:
 .PHONY: powerline
 
 oh-my-zsh:
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 .PHONY: oh-my-zsh
 
 zsh-symlink:
@@ -63,6 +63,10 @@ zsh-plugins:
 	./clone_if_not_exists.sh https://github.com/zsh-users/zsh-syntax-highlighting.git $(ZSH_CUSTOM)/plugins/zsh-syntax-highlighting
 .PHONY: zsh-plugins
 
-zsh: oh-my-zsh zsh-symlink zsh-plugins
+zsh-machine-specific:
+	touch $(REPO_PATH)/machine_specific_zshrc
+.PHONY: zsh-machine-specific
 
-all: symlinks machine-specific vundle vim-colorschemes vim-plugins powerline
+zsh: oh-my-zsh zsh-symlink zsh-plugins zsh-machine-specific
+
+all: symlinks bash-machine-specific vundle vim-colorschemes vim-plugins powerline zsh
