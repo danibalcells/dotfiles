@@ -157,3 +157,6 @@ map ; :Files<CR>
 " --------- Tagbar ---------------
 nmap <leader>tt :TagbarToggle<CR>
 nmap <leader>tr :TagbarOpen fj<CR>
+
+" --------- Macros ---------------
+let @p = 't(€kr€krci('
