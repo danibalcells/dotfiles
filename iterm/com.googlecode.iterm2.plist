@@ -441,10 +441,8 @@ MB - LWS:Restore Window Arrangement</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/desktop</string>
+	<string>~/.dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -461,7 +459,7 @@ MB - LWS:Restore Window Arrangement</string>
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -483,29 +481,15 @@ MB - LWS:Restore Window Arrangement</string>
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>769 33 445 77 0 0 1280 778 </string>
-	<key>NSWindow Frame Preferences</key>
-	<string>1407 545 606 456 1280 224 1280 777 </string>
+	<string>645 110 624 227 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>332 288 620 392 0 0 1280 777 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 0 606 469 0 0 1280 1001 </string>
+	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>297 289 796 486 0 0 1280 778 </string>
+	<string>269 349 796 486 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 489 570 287 0 0 1280 778 </string>
+	<string>6 6 1428 865 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>135 266 570 352 0 0 1280 778 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>645 2 633 495 0 0 1280 1002 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>645 2 633 492 0 0 1280 1002 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>645 648 570 352 0 0 1280 1002 </string>
-	<key>NSWindow Frame iTerm Window 5</key>
-	<string>645 21 633 755 0 0 1280 778 </string>
-	<key>NSWindow Frame iTerm Window 6</key>
-	<string>855 -2 423 777 0 0 1280 777 </string>
+	<string>176 70 570 287 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1231,7 +1215,7 @@ MB - LWS:Restore Window Arrangement</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShureTechMonoNerdFontCompleteM-Regular 13</string>
+			<string>HackNerdFontComplete-Regular 11</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1958,123 +1942,14 @@ MB - LWS:Restore Window Arrangement</string>
 			<string>/Users/dbalcells</string>
 		</dict>
 	</array>
-	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
-	<key>NoSyncConfirmBeta</key>
-	<true/>
-	<key>NoSyncConfirmShellIntegrationCommand</key>
-	<true/>
-	<key>NoSyncConfirmShellIntegrationCommand_selection</key>
-	<integer>0</integer>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-	<integer>0</integer>
-	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
-	<integer>1</integer>
-	<key>NoSyncInstallUtilitiesPackage</key>
-	<true/>
-	<key>NoSyncInstallUtilitiesPackage_selection</key>
-	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>70C66CD4-EE72-4C23-903D-F9BD6E938EF7</string>
-	<key>NoSyncLastTipTime</key>
-	<real>530807013.92685503</real>
-	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>1</integer>
+	<string>C6BF13A0-9A96-42EA-A097-750C5DF4246F</string>
 	<key>NoSyncPermissionToShowTip</key>
-	<true/>
-	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
-	<true/>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>484761746.30749297</real>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>485475268.49655098</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>490898910.377087</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-		<string>0003</string>
-		<string>0004</string>
-		<string>0005</string>
-		<string>0006</string>
-		<string>0007</string>
-		<string>0008</string>
-		<string>0009</string>
-		<string>0010</string>
-		<string>0010</string>
-		<string>0011</string>
-		<string>0012</string>
-		<string>0013</string>
-		<string>0014</string>
-		<string>0015</string>
-		<string>0016</string>
-		<string>0017</string>
-		<string>0018</string>
-		<string>0019</string>
-		<string>0020</string>
-		<string>0021</string>
-		<string>0022</string>
-		<string>0023</string>
-		<string>0024</string>
-		<string>0025</string>
-		<string>0026</string>
-		<string>0027</string>
-		<string>0028</string>
-		<string>0029</string>
-		<string>0030</string>
-		<string>0031</string>
-		<string>0032</string>
-		<string>0033</string>
-		<string>0034</string>
-		<string>0035</string>
-		<string>0036</string>
-		<string>0037</string>
-		<string>0038</string>
-		<string>0039</string>
-		<string>0040</string>
-		<string>0041</string>
-		<string>0042</string>
-		<string>0043</string>
-		<string>0044</string>
-		<string>0045</string>
-		<string>0046</string>
-		<string>0047</string>
-		<string>0048</string>
-		<string>0049</string>
-		<string>0050</string>
-		<string>0051</string>
-		<string>0052</string>
-		<string>0053</string>
-		<string>0054</string>
-		<string>0055</string>
-		<string>0056</string>
-		<string>0057</string>
-		<string>0058</string>
-		<string>0059</string>
-		<string>0060</string>
-		<string>0061</string>
-		<string>0062</string>
-		<string>0063</string>
-		<string>0064</string>
-		<string>0065</string>
-		<string>0066</string>
-		<string>0067</string>
-		<string>0068</string>
-		<string>0069</string>
-		<string>0070</string>
-		<string>0071</string>
-	</array>
+	<real>575473178.75787401</real>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -2115,23 +1990,21 @@ MB - LWS:Restore Window Arrangement</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/daniel/.dotfiles/iterm</string>
+	<string>/Users/dbalcells/.dotfiles/iterm</string>
 	<key>PromptOnQuit</key>
-	<true/>
-	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=51</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=21</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-14T12:06:25Z</date>
-	<key>SUSkippedVersion</key>
-	<string>3.0.12</string>
+	<date>2019-05-15T21:29:34Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
@@ -7534,7 +7407,7 @@ MB - LWS:Restore Window Arrangement</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.4beta2</string>
+	<string>3.2.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
