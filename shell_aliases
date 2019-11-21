@@ -60,7 +60,7 @@ function scr {
         screen -dr $existing_session
     else
         title $name
-        screen -S $name bash -c 'export ITERM_TITLE='$name'; bash -i'
+        screen -S $name
     fi
 }
 if [ ! -z "$ITERM_TITLE" ]; then title $ITERM_TITLE; fi
