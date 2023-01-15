@@ -31,7 +31,7 @@ vundle:
 
 vim-colorschemes:
 	mkdir -p $(LINK_PATH)/.vim
-	ln -s -h $(FORCE) $(REPO_PATH)/vim_colors $(LINK_PATH)/.vim/colors
+	ln -s $(FORCE) $(REPO_PATH)/vim_colors $(LINK_PATH)/.vim/colors
 .PHONY: vim-colorschemes
 
 vim-plugins:
@@ -44,7 +44,7 @@ powerline:
 		$(shell pip show powerline-status | grep Location | awk '{print $$2}')/powerline/bindings/bash/powerline.sh \
 		$(REPO_PATH)/powerline.sh
 	mkdir -p $(LINK_PATH)/.config
-	ln -s -h $(FORCE) $(REPO_PATH)/powerline_config_files $(LINK_PATH)/.config/powerline
+	ln -s $(FORCE) $(REPO_PATH)/powerline_config_files $(LINK_PATH)/.config/powerline
 .PHONY: powerline
 
 oh-my-zsh:
@@ -70,3 +70,4 @@ zsh-machine-specific:
 zsh: oh-my-zsh zsh-symlink zsh-plugins zsh-machine-specific
 
 all: symlinks bash-machine-specific vundle vim-colorschemes vim-plugins powerline zsh
+some: powerline zsh

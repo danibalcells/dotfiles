@@ -87,7 +87,7 @@ set cursorline     " highlight current line
 
 "Noice colorscheme
 set termguicolors
-colorscheme material-monokai
+colorscheme monokai
 set background=dark
 highlight Normal guibg=black guifg=white
 
@@ -160,3 +160,10 @@ nmap <leader>tr :TagbarOpen fj<CR>
 
 " --------- Macros ---------------
 let @p = 't(€kr€krci('
+
+" --------- Preserve colors in GNU screen
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color GNU screen.
+  set t_ut=
+endif
