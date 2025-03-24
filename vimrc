@@ -167,3 +167,6 @@ if &term =~ '256color'
   " render properly when inside 256-color GNU screen.
   set t_ut=
 endif
+
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
