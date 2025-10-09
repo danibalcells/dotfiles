@@ -43,9 +43,6 @@ Plugin 'scrooloose/nerdcommenter'
 " Tag bar
 Plugin 'git://github.com/majutsushi/tagbar'
 
-" Solidity syntax highlighting
-Plugin 'git://github.com/tomlion/vim-solidity'
-
 " PEP-8 indentation
 Plugin 'Vimjas/vim-python-pep8-indent'
 
@@ -159,7 +156,7 @@ nmap <leader>tt :TagbarToggle<CR>
 nmap <leader>tr :TagbarOpen fj<CR>
 
 " --------- Macros ---------------
-let @p = 't(€kr€krci('
+let @p = 't(ï¿½krï¿½krci('
 
 " --------- Preserve colors in GNU screen
 if &term =~ '256color'

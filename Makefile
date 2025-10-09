@@ -53,6 +53,7 @@ oh-my-zsh:
 
 zsh-symlink:
 	ln -s $(FORCE) $(REPO_PATH)/zsh/zshrc $(LINK_PATH)/.zshrc
+	ln -s $(FORCE) $(REPO_PATH)/zsh/p10k.zsh $(LINK_PATH)/.p10k.zsh
 .PHONY: zsh-symlink
 
 zsh-plugins:
