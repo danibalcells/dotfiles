@@ -7,6 +7,13 @@ info() { printf "\033[0;34m[dotfiles]\033[0m %s\n" "$1"; }
 ok()   { printf "\033[0;32m[dotfiles]\033[0m %s\n" "$1"; }
 warn() { printf "\033[0;33m[dotfiles]\033[0m %s\n" "$1"; }
 
+INSTALL_VIM=false
+for arg in "$@"; do
+    case "$arg" in
+        --vim) INSTALL_VIM=true ;;
+    esac
+done
+
 if [[ "$(uname)" == "Darwin" ]]; then
     if ! command -v brew &>/dev/null; then
         info "Installing Homebrew..."
@@ -16,7 +23,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
     if [[ -f "$DOTFILES_DIR/Brewfile" ]]; then
         info "Installing Homebrew packages..."
-        brew bundle --file="$DOTFILES_DIR/Brewfile" --no-lock
+        brew bundle --file="$DOTFILES_DIR/Brewfile"
     fi
 fi
 
@@ -27,6 +34,15 @@ if ! command -v starship &>/dev/null; then
     else
         mkdir -p "$HOME/.local/bin"
         curl -sS https://starship.rs/install.sh | sh -s -- -y -b "$HOME/.local/bin"
+    fi
+fi
+
+if ! command -v uv &>/dev/null; then
+    info "Installing uv..."
+    if command -v brew &>/dev/null; then
+        brew install uv
+    else
+        curl -LsSf https://astral.sh/uv/install.sh | sh
     fi
 fi
 
@@ -79,19 +95,22 @@ symlink() {
 
 symlink "$DOTFILES_DIR/zsh/.zshrc"                    "$HOME/.zshrc"
 symlink "$DOTFILES_DIR/git/.gitconfig"                 "$HOME/.gitconfig"
-symlink "$DOTFILES_DIR/vim/.vimrc"                     "$HOME/.vimrc"
-symlink "$DOTFILES_DIR/vim/.vim/colors"                "$HOME/.vim/colors"
 symlink "$DOTFILES_DIR/tmux/.tmux.conf"                "$HOME/.tmux.conf"
 symlink "$DOTFILES_DIR/screen/.screenrc"               "$HOME/.screenrc"
 symlink "$DOTFILES_DIR/starship/.config/starship.toml" "$HOME/.config/starship.toml"
 
-VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
-if [[ ! -d "$VUNDLE_DIR" ]]; then
-    info "Installing Vundle..."
-    git clone https://github.com/VundleVim/Vundle.vim.git "$VUNDLE_DIR"
+if [[ "$INSTALL_VIM" == true ]]; then
+    symlink "$DOTFILES_DIR/vim/.vimrc"      "$HOME/.vimrc"
+    symlink "$DOTFILES_DIR/vim/.vim/colors" "$HOME/.vim/colors"
+
+    VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
+    if [[ ! -d "$VUNDLE_DIR" ]]; then
+        info "Installing Vundle..."
+        git clone https://github.com/VundleVim/Vundle.vim.git "$VUNDLE_DIR"
+    fi
+    info "Installing Vim plugins..."
+    vim +PluginInstall +qall 2>/dev/null || warn "Vim plugin install had warnings (non-fatal)"
 fi
-info "Installing Vim plugins..."
-vim +PluginInstall +qall 2>/dev/null || warn "Vim plugin install had warnings (non-fatal)"
 
 if [[ ! -f "$HOME/.local.zsh" ]]; then
     cp "$DOTFILES_DIR/local.zsh.example" "$HOME/.local.zsh"

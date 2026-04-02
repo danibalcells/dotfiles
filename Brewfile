@@ -15,6 +15,7 @@ brew "tmux"
 
 brew "pyenv"
 brew "pipx"
+brew "uv"
 brew "node"
 brew "pnpm"
 
