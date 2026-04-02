@@ -1,0 +1,19 @@
+# ~/.local.zsh — Machine-specific configuration
+# This file is sourced at the end of .zshrc
+# It is NOT tracked in git — edit freely for this machine
+
+# --- macOS: credential helper ---
+# git config --global credential.helper osxkeychain
+
+# --- Work email override ---
+# git config --global includeIf.gitdir:~/work/.path ~/work/.gitconfig
+
+# --- LaTeX (macOS with MacTeX) ---
+# export PATH="/Library/TeX/texbin:$PATH"
+
+# --- Google Cloud SDK ---
+# [[ -f ~/google-cloud-sdk/path.zsh.inc ]] && source ~/google-cloud-sdk/path.zsh.inc
+# [[ -f ~/google-cloud-sdk/completion.zsh.inc ]] && source ~/google-cloud-sdk/completion.zsh.inc
+
+# --- Custom PATH additions ---
+# export PATH="$HOME/custom/bin:$PATH"

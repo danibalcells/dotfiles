@@ -1,7 +1,9 @@
-.*
-machine_specific_bashrc
-machine_specific_zshrc
-bundle*
-powerline.sh
-zsh/custom/themes
-zsh/custom/plugins
+local.zsh
+
+vim/.vim/bundle/
+
+.zsh/
+
+.DS_Store
+
+*.bak
