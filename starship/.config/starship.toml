@@ -1,43 +1,53 @@
+add_newline = false
+
 format = """
 $username\
 $hostname\
 $directory\
-$git_branch\
-$git_status\
-$python\
-$nodejs\
-$cmd_duration\
-$line_break\
 $character"""
 
-right_format = """$time"""
+right_format = """
+$git_branch\
+$git_status\
+$cmd_duration\
+$python\
+$nodejs\
+$time"""
 
 [username]
 style_user = "bold green"
 show_always = false
+format = "[$user]($style)"
 
 [hostname]
 ssh_only = true
 style = "bold green"
+format = "[@$hostname]($style) "
 
 [directory]
-truncation_length = 3
+truncation_length = 1
 truncate_to_repo = false
 style = "bold blue"
 
 [git_branch]
 style = "bold green"
-format = "[$symbol$branch(:$remote_branch)]($style) "
+symbol = ""
+format = "[$branch(:$remote_branch)]($style) "
+truncation_length = 11
+truncation_symbol = "…"
 
 [git_status]
 style = "bold yellow"
 
 [python]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-symbol = "🐍 "
+format = '[\($virtualenv\)]($style) '
+style = "bold yellow"
+detect_extensions = []
+detect_files = []
+detect_folders = []
 
 [nodejs]
-format = "[$symbol($version )]($style)"
+format = "[$symbol($version)]($style) "
 
 [cmd_duration]
 min_time = 2000
@@ -46,7 +56,7 @@ format = "[$duration]($style) "
 [time]
 disabled = false
 format = "[$time]($style)"
-time_format = "%H:%M"
+time_format = "%H:%M:%S"
 style = "dimmed white"
 
 [character]
