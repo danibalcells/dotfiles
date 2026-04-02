@@ -1,63 +1,68 @@
 add_newline = false
 
 format = """
+[](fg:#444444)\
 $username\
 $hostname\
 $directory\
+[](fg:#444444) \
 $character"""
 
 right_format = """
-$git_branch\
-$git_status\
 $cmd_duration\
 $python\
 $nodejs\
-$time"""
+[](fg:#444444)\
+$git_branch\
+$git_status\
+$time\
+"""
 
 [username]
-style_user = "bold green"
 show_always = false
-format = "[$user]($style)"
+style_user = "fg:white bg:#444444 bold"
+format = '[ $user]($style)'
 
 [hostname]
 ssh_only = true
-style = "bold green"
-format = "[@$hostname]($style) "
+style = "fg:white bg:#444444 bold"
+format = '[@$hostname]($style)'
 
 [directory]
 truncation_length = 1
 truncate_to_repo = false
-style = "bold blue"
+style = "fg:bright-blue bg:#444444 bold"
+format = '[ $path ]($style)'
 
 [git_branch]
-style = "bold green"
+style = "fg:green bg:#444444 bold"
 symbol = ""
-format = "[$branch(:$remote_branch)]($style) "
+format = '[ $branch(:$remote_branch)]($style)'
 truncation_length = 11
 truncation_symbol = "…"
 
 [git_status]
-style = "bold yellow"
+style = "fg:yellow bg:#444444 bold"
+format = '([ $all_status$ahead_behind]($style))'
 
 [python]
-format = '[\($virtualenv\)]($style) '
-style = "bold yellow"
+format = '[\($virtualenv\)](bold yellow) '
 detect_extensions = []
 detect_files = []
 detect_folders = []
 
 [nodejs]
-format = "[$symbol($version)]($style) "
+format = "[$symbol$version](bold green) "
 
 [cmd_duration]
 min_time = 2000
-format = "[$duration]($style) "
+format = "[$duration](bold yellow) "
 
 [time]
 disabled = false
-format = "[$time]($style)"
+format = '[ $time ]($style)'
 time_format = "%H:%M:%S"
-style = "dimmed white"
+style = "fg:#808080 bg:#444444"
 
 [character]
 success_symbol = "[❯](bold green)"
