@@ -1,0 +1,1 @@
+/Users/dani/Library/Python/3.11/lib/python/site-packages/powerline/bindings/bash/powerline.sh

@@ -1,0 +1,12 @@
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Homebrew: Python
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
+
+source ~/code/powerlevel10k/powerlevel10k.zsh-theme
+
+# Virtualenvwrapper stuff
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/code
+source /opt/homebrew/bin/virtualenvwrapper.sh
