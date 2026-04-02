@@ -63,7 +63,7 @@ behind = '⇣${count}'
 diverged = '⇕'
 
 [python]
-format = '([$virtualenv ](fg:yellow bg:seg_main))'
+format = '([](fg:seg_main)[$virtualenv ](fg:yellow bg:seg_main)[](fg:seg_main) )'
 detect_extensions = []
 detect_files = []
 detect_folders = []
