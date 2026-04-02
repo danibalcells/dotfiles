@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export PATH="$HOME/.local/bin:$PATH"
+
 pass() { printf "\033[0;32m✓ %s\033[0m\n" "$1"; }
 fail() { printf "\033[0;31m✗ %s\033[0m\n" "$1"; exit 1; }
 

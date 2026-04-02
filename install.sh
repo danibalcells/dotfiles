@@ -25,7 +25,8 @@ if ! command -v starship &>/dev/null; then
     if command -v brew &>/dev/null; then
         brew install starship
     else
-        curl -sS https://starship.rs/install.sh | sh -s -- -y
+        mkdir -p "$HOME/.local/bin"
+        curl -sS https://starship.rs/install.sh | sh -s -- -y -b "$HOME/.local/bin"
     fi
 fi
 
