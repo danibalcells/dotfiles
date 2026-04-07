@@ -1,0 +1,31 @@
+---
+description: Prevent accidental loss of Nerd Font/powerline glyphs when editing starship.toml
+globs: starship/.config/starship.toml
+alwaysApply: false
+---
+
+# Preserve Nerd Font glyphs in starship.toml
+
+`starship/.config/starship.toml` contains multi-byte Unicode glyphs (Nerd Font powerline symbols such as the rounded segment edges). These are invisible in many editors and are silently dropped or corrupted when a file is **rewritten in full** (e.g. using the `Write` tool).
+
+## Rule
+
+**Never use the `Write` tool on `starship.toml`.** Always use `StrReplace` or shell commands (`sed -i`) that operate on specific substrings, leaving all other bytes — including the glyphs — untouched.
+
+## Verification
+
+After any edit, run a git diff and confirm that lines containing the glyphs show **only** the intended color-name changes and nothing else:
+
+```bash
+git diff starship/.config/starship.toml
+```
+
+A safe diff touches only ASCII content (color names, palette values). If a glyph line appears in the diff with the glyph removed or changed, the edit must be reverted with `git checkout starship/.config/starship.toml` and re-applied using `StrReplace` or `sed`.
+
+## Recovery
+
+```bash
+git checkout starship/.config/starship.toml
+```
+
+Then re-apply changes surgically with `StrReplace` (for pure-ASCII lines) or `sed -i ''` (for lines that also contain glyphs — replace only the ASCII substring, never the full line).

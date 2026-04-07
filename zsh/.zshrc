@@ -34,6 +34,19 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 
+_starship_set_palette() {
+    local mode
+    mode=$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo "Light")
+    [[ "$mode" == "$_STARSHIP_LAST_MODE" ]] && return
+    _STARSHIP_LAST_MODE="$mode"
+    local palette="p10k_${(L)mode}"
+    sed "s/^palette = .*/palette = \"$palette\"/" \
+        "$HOME/.dotfiles/starship/.config/starship.toml" \
+        > "${TMPDIR:-/tmp}/starship_active.toml"
+    export STARSHIP_CONFIG="${TMPDIR:-/tmp}/starship_active.toml"
+}
+precmd_functions+=(_starship_set_palette)
+
 eval "$(starship init zsh)"
 
 [[ -f ~/.local.zsh ]] && source ~/.local.zsh

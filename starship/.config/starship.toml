@@ -25,6 +25,18 @@ seg_main = '#444444'
 seg_dark = '#262626'
 fg_text = '#d4d4d4'
 fg_dim = '#7099b8'
+col_green = '#5af75a'
+col_yellow = '#f5d76e'
+col_red = '#ff6b6b'
+
+[palettes.p10k_light]
+seg_main = '#c8c8c8'
+seg_dark = '#aaaaaa'
+fg_text = '#1a1a1a'
+fg_dim = '#4a6a9a'
+col_green = '#1a7a1a'
+col_yellow = '#7a5a00'
+col_red = '#b01010'
 
 [username]
 show_always = false
@@ -40,19 +52,19 @@ format = '[@$hostname]($style)'
 truncation_length = 1
 truncate_to_repo = false
 fish_style_pwd_dir_length = 1
-style = "fg:white bg:seg_main"
+style = "fg:fg_text bg:seg_main"
 format = '[ $path ]($style)'
 
 [git_branch]
 symbol = " "
-style = "fg:green bg:seg_main"
+style = "fg:col_green bg:seg_main"
 format = '[](fg:seg_main)[ $symbol$branch(:$remote_branch) ]($style)'
 truncation_length = 11
 truncation_symbol = "…"
 
 [git_status]
-style = "fg:yellow bg:seg_main"
-format = '([$all_status$ahead_behind ](fg:yellow bg:seg_main))[](fg:seg_main) '
+style = "fg:col_yellow bg:seg_main"
+format = '([$all_status$ahead_behind ](fg:col_yellow bg:seg_main))[](fg:seg_main) '
 modified = '!${count}'
 untracked = '?${count}'
 staged = '+${count}'
@@ -63,17 +75,17 @@ behind = '⇣${count}'
 diverged = '⇕'
 
 [python]
-format = '([](fg:seg_main)[$virtualenv ](fg:yellow bg:seg_main)[](fg:seg_main) )'
+format = '([](fg:seg_main)[$virtualenv ](fg:col_yellow bg:seg_main)[](fg:seg_main) )'
 detect_extensions = []
 detect_files = []
 detect_folders = []
 
 [nodejs]
-format = '[$symbol$version ](fg:green bg:seg_main)'
+format = '[$symbol$version ](fg:col_green bg:seg_main)'
 
 [cmd_duration]
 min_time = 2000
-format = '[ $duration ](fg:yellow bg:seg_main)'
+format = '[ $duration ](fg:col_yellow bg:seg_main)'
 
 [time]
 disabled = false
@@ -81,5 +93,5 @@ format = '[ $time ](fg:fg_text bg:seg_dark)'
 time_format = "%H:%M:%S"
 
 [character]
-success_symbol = "[❯](green)"
-error_symbol = "[❯](red)"
+success_symbol = "[❯](col_green)"
+error_symbol = "[❯](col_red)"
