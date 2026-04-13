@@ -1,0 +1,6 @@
+---
+description: Dev servers must handle port conflicts by auto-selecting another port
+alwaysApply: true
+---
+
+When building HTTP servers (whether Python or JS/TS), launching in development mode should always have a way of dealing with the default port already being in use, resulting in another port being chosen automatically.

@@ -1,0 +1,6 @@
+---
+description: Load environment variables using load_dotenv and os.env in Python
+alwaysApply: true
+---
+
+In Python, load environment variables using `load_dotenv` and `os.env`.

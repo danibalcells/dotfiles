@@ -1,0 +1,6 @@
+---
+description: After implementing a CLI tool, always explain how to run it
+alwaysApply: true
+---
+
+Whenever you finish implementing something that's meant to be run from the command line, include a line at the end of your message explaining how it can be run.

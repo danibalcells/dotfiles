@@ -1,0 +1,6 @@
+---
+description: Don't create new git branches unless the user explicitly asks
+alwaysApply: true
+---
+
+In general, the user will specify it when they want you to create a new branch for the task at hand. If it's not specified, don't create new branches.

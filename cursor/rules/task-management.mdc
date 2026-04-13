@@ -1,0 +1,6 @@
+---
+description: Don't mark tasks as Done unless asked; always fetch comments when fetching issues
+alwaysApply: true
+---
+
+When working with task management tools, don't mark issues as Done unless the user asks you to do so. When fetching an issue, also fetch its comments.

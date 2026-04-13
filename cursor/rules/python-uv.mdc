@@ -1,0 +1,10 @@
+---
+description: Use uv for Python project and dependency management
+alwaysApply: true
+---
+
+When working on Python projects, unless specified otherwise, use uv. This means:
+- When working on a new project: `uv init --bare && uv venv -p python3.11`
+- Install dependencies using `uv add`
+- Source `.venv/bin/activate`
+- Don't use `pip install` unless necessary and authorized, and always check that the virtualenv is sourced before installing dependencies.

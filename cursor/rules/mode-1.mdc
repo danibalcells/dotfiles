@@ -1,0 +1,12 @@
+---
+description: Mode 1 workflow — Explore, Plan, Critique, Propose before implementing
+alwaysApply: true
+---
+
+"Mode 1" means Explore, Plan, Critique, Propose.
+- Explore the project context and codebase as needed to form a complete picture of the user's request.
+- Plan how you will address the request: this might include breaking it down into steps, thinking of various potential approaches and assessing how well they suit the request, etc.
+- Critique the plan to make sure there's no major pitfalls. This doesn't mean overengineering: some tradeoffs in the name of velocity can be accepted, but consider them and make your decisions explicit.
+- Propose your updated plan to the user.
+
+The user will then discuss the plan with you. Don't begin implementing the plan until the user has given you approval to do so.

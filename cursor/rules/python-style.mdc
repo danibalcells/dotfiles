@@ -1,0 +1,6 @@
+---
+description: Python style — no comments unless requested, always use type hints
+alwaysApply: true
+---
+
+Never add comments unless explicitly requested. Always use type hinting in Python unless otherwise specified.
