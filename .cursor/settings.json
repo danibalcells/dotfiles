@@ -1,0 +1,222 @@
+{
+    "editor.minimap.autohide": true,
+    "git.confirmSync": false,
+    "notebook.lineNumbers": "on",
+    "notebook.output.scrolling": true,
+    "notebook.stickyScroll.enabled": true,
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "editor.fontFamily": "RobotoMono Nerd Font,Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.minimumContrastRatio": 1,
+    "terminal.integrated.scrollback": 100000,
+    "workbench.editor.autoLockGroups": {
+        "workbench.editor.chatSession": true
+    },
+    "workbench.editor.pinnedTabSizing": "compact",
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "workbench.editor.tabSizingFixedMaxWidth": 100,
+    "vim.vimrc.enable": true,
+    "python.venvPath": "~/.virtualenvs",
+    "workbench.iconTheme": "Monokai Pro Light Icons",
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.colorCustomizations": {
+    //     "terminal.background": "#2C2525",
+    //     "terminal.foreground": "#F7F1FF",
+    //     "terminalCursor.background": "#F7F1FF",
+    //     "terminal.ansiBlack": "#222222",
+    //     "terminal.ansiBlue": "#5ad4e6",
+    //     "terminal.ansiBrightBlack": "#A9A9A9",
+    //     "terminal.ansiBrightBlue": "#948AE3",
+    //     "terminal.ansiBrightCyan": "#5AD4E6",
+    //     "terminal.ansiBrightGreen": "#7BD88F",
+    //     "terminal.ansiBrightMagenta": "#FD9353",
+    //     "terminal.ansiBrightRed": "#FC618D",
+    //     "terminal.ansiBrightWhite": "#FFFFFF",
+    //     "terminal.ansiBrightYellow": "#FCE566",
+    //     "terminal.ansiCyan": "#5ad4e6",
+    //     "terminal.ansiGreen": "#7BD88F",
+    //     "terminal.ansiMagenta": "#FD9353",
+    //     "terminal.ansiRed": "#FC618D",
+    //     "terminal.ansiWhite": "#FFFFFF",
+    //     "terminal.ansiYellow": "#FCE566"
+    },
+    "scm.diffDecorations": "gutter",
+    "outline.showBooleans": false,
+    "outline.showEnums": false,
+    "outline.showEnumMembers": false,
+    "outline.showObjects": false,
+    "outline.showStrings": false,
+    "outline.showVariables": false,
+    "window.commandCenter": false,
+    "github.copilot.chat.welcomeMessage": "never",
+    "github.copilot.advanced": {},
+    "explorer.confirmDragAndDrop": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.matchOnWordStartOnly": false,
+    "inlineChat.mode": "live",
+    "jupyter.askForKernelRestart": false,
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80
+    },
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "/Users/dani/code/irm/api",
+        "/Users/dani/code/irm/api/.venv/lib/python3.11/site-packages"
+    ],
+    "editor.wordWrap": "on",
+    "notebook.output.wordWrap": true,
+    "cursor.chat.showSuggestedFiles": true,
+    "cursor.aipreview.enabled": true,
+    "workbench.colorTheme": "Monokai Pro Light",
+    "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Ristretto)",
+    "workbench.preferredLightColorTheme": "Monokai Pro Light",
+    "window.systemColorTheme": "auto",
+    "terminal.integrated.cursorBlinking": true,
+    "workbench.preferredHighContrastLightColorTheme": "Default High Contrast",
+    "editor.suggest.showStatusBar": true,
+    "editor.inlineSuggest.enabled": false,
+    "cursor.composer.renderPillsInsteadOfBlocks": true,
+    "files.exclude": {
+        "__pycache__": true
+    },
+    "git.enableSmartCommit": true,
+    "workbench.editor.tabSizing": "shrink",
+    "git.openRepositoryInParentFolders": "never",
+    "cursor.composer.agentLoopOnLints": false,
+    "makefile.configureOnOpen": false,
+    "editor.accessibilitySupport": "on",
+    "accessibility.signals.terminalBell": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.chatEditModifiedFile": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.clear": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.codeActionApplied": {
+        "sound": "off"
+    },
+    "accessibility.signals.codeActionTriggered": {
+        "sound": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.editsKept": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.positionHasError": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.progress": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.terminalCommandFailed": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.editsUndone": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.voiceRecordingStarted": {
+        "sound": "off"
+    },
+    "accessibility.signals.voiceRecordingStopped": {
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off",
+        "announcement": "auto"
+    },
+    "claudeCode.preferredLocation": "panel",
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "cursor.composer.textSizeScale": 0.85,
+    "breadcrumbs.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "cursor.composer.queueMessageDefaultBehavior": "stop-and-send",
+    "window.autoDetectColorScheme": true,
+    "remote.SSH.remotePlatform": {
+        "ssh root@216.81.245.7 -p 15874 -i ~/.ssh/id_ed25519": "linux",
+        "ssh root@216.81.245.7 -p 37206 -i ~/.ssh/id_ed25519": "linux"
+    }
+}

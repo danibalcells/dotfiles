@@ -8,9 +8,11 @@ ok()   { printf "\033[0;32m[dotfiles]\033[0m %s\n" "$1"; }
 warn() { printf "\033[0;33m[dotfiles]\033[0m %s\n" "$1"; }
 
 INSTALL_VIM=false
+INSTALL_OBSIDIAN=false
 for arg in "$@"; do
     case "$arg" in
-        --vim) INSTALL_VIM=true ;;
+        --vim)      INSTALL_VIM=true ;;
+        --obsidian) INSTALL_OBSIDIAN=true ;;
     esac
 done
 
@@ -115,6 +117,44 @@ fi
 if [[ ! -f "$HOME/.local.zsh" ]]; then
     cp "$DOTFILES_DIR/local.zsh.example" "$HOME/.local.zsh"
     info "Created ~/.local.zsh from template — edit it for this machine"
+fi
+
+# Cursor
+symlink_dir_contents() {
+    local src_dir="$1" dest_dir="$2"
+    mkdir -p "$dest_dir"
+    find "$src_dir" -maxdepth 1 -mindepth 1 | while read -r item; do
+        local name dest
+        name="$(basename "$item")"
+        dest="$dest_dir/$name"
+        if [[ -d "$item" ]]; then
+            [[ -e "$dest" || -L "$dest" ]] && rm -rf "$dest"
+        else
+            [[ -e "$dest" || -L "$dest" ]] && rm "$dest"
+        fi
+        ln -s "$item" "$dest"
+        ok "Linked $dest → $item"
+    done
+}
+
+CURSOR_DIR="$HOME/.cursor"
+mkdir -p "$CURSOR_DIR/rules" "$CURSOR_DIR/skills"
+
+symlink "$DOTFILES_DIR/.cursor/skills-cursor" "$CURSOR_DIR/skills-cursor"
+symlink "$DOTFILES_DIR/.cursor/mcp.json"      "$CURSOR_DIR/mcp.json"
+symlink_dir_contents "$DOTFILES_DIR/.cursor/rules"  "$CURSOR_DIR/rules"
+symlink_dir_contents "$DOTFILES_DIR/.cursor/skills" "$CURSOR_DIR/skills"
+
+if [[ "$INSTALL_OBSIDIAN" == true ]]; then
+    symlink_dir_contents "$DOTFILES_DIR/.cursor/optional/obsidian/rules"  "$CURSOR_DIR/rules"
+    symlink_dir_contents "$DOTFILES_DIR/.cursor/optional/obsidian/skills" "$CURSOR_DIR/skills"
+fi
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    CURSOR_USER="$HOME/Library/Application Support/Cursor/User"
+    mkdir -p "$CURSOR_USER"
+    symlink "$DOTFILES_DIR/.cursor/settings.json"    "$CURSOR_USER/settings.json"
+    symlink "$DOTFILES_DIR/.cursor/keybindings.json" "$CURSOR_USER/keybindings.json"
 fi
 
 ok "Done! Restart your shell or run: exec zsh"
