@@ -140,21 +140,21 @@ symlink_dir_contents() {
 CURSOR_DIR="$HOME/.cursor"
 mkdir -p "$CURSOR_DIR/rules" "$CURSOR_DIR/skills"
 
-symlink "$DOTFILES_DIR/.cursor/skills-cursor" "$CURSOR_DIR/skills-cursor"
-symlink "$DOTFILES_DIR/.cursor/mcp.json"      "$CURSOR_DIR/mcp.json"
-symlink_dir_contents "$DOTFILES_DIR/.cursor/rules"  "$CURSOR_DIR/rules"
-symlink_dir_contents "$DOTFILES_DIR/.cursor/skills" "$CURSOR_DIR/skills"
+symlink "$DOTFILES_DIR/cursor/skills-cursor" "$CURSOR_DIR/skills-cursor"
+symlink "$DOTFILES_DIR/cursor/mcp.json"      "$CURSOR_DIR/mcp.json"
+symlink_dir_contents "$DOTFILES_DIR/cursor/rules"  "$CURSOR_DIR/rules"
+symlink_dir_contents "$DOTFILES_DIR/cursor/skills" "$CURSOR_DIR/skills"
 
 if [[ "$INSTALL_OBSIDIAN" == true ]]; then
-    symlink_dir_contents "$DOTFILES_DIR/.cursor/optional/obsidian/rules"  "$CURSOR_DIR/rules"
-    symlink_dir_contents "$DOTFILES_DIR/.cursor/optional/obsidian/skills" "$CURSOR_DIR/skills"
+    symlink_dir_contents "$DOTFILES_DIR/cursor/optional/obsidian/rules"  "$CURSOR_DIR/rules"
+    symlink_dir_contents "$DOTFILES_DIR/cursor/optional/obsidian/skills" "$CURSOR_DIR/skills"
 fi
 
 if [[ "$(uname)" == "Darwin" ]]; then
     CURSOR_USER="$HOME/Library/Application Support/Cursor/User"
     mkdir -p "$CURSOR_USER"
-    symlink "$DOTFILES_DIR/.cursor/settings.json"    "$CURSOR_USER/settings.json"
-    symlink "$DOTFILES_DIR/.cursor/keybindings.json" "$CURSOR_USER/keybindings.json"
+    symlink "$DOTFILES_DIR/cursor/settings.json"    "$CURSOR_USER/settings.json"
+    symlink "$DOTFILES_DIR/cursor/keybindings.json" "$CURSOR_USER/keybindings.json"
 fi
 
 ok "Done! Restart your shell or run: exec zsh"
