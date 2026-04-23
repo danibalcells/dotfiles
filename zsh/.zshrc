@@ -49,4 +49,18 @@ precmd_functions+=(_starship_set_palette)
 
 eval "$(starship init zsh)"
 
+# Long-running command bell
+# Set ZBELL_DISABLE=1 in ~/.local.zsh (or anywhere in your environment) to silence it.
+autoload -Uz add-zsh-hook
+typeset -i ZBELL_THRESHOLD=${ZBELL_THRESHOLD:-20}
+
+_zbell_save_start() { _zbell_start=$SECONDS }
+_zbell_check() {
+  [[ ${ZBELL_DISABLE:-0} == 1 ]] && return
+  (( SECONDS - _zbell_start >= ZBELL_THRESHOLD )) && print "\a"
+}
+
+add-zsh-hook preexec _zbell_save_start
+add-zsh-hook precmd  _zbell_check
+
 [[ -f ~/.local.zsh ]] && source ~/.local.zsh

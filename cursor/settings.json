@@ -96,7 +96,7 @@
     "editor.accessibilitySupport": "on",
     "accessibility.signals.terminalBell": {
         "announcement": "off",
-        "sound": "off"
+        "sound": "on"
     },
     "accessibility.signals.lineHasBreakpoint": {
         "sound": "off",
@@ -179,12 +179,12 @@
         "announcement": "auto"
     },
     "accessibility.signals.terminalCommandFailed": {
-        "sound": "off",
-        "announcement": "auto"
+        "announcement": "auto",
+        "sound": "off"
     },
     "accessibility.signals.terminalCommandSucceeded": {
-        "sound": "off",
-        "announcement": "auto"
+        "announcement": "auto",
+        "sound": "off"
     },
     "accessibility.signals.terminalQuickFix": {
         "sound": "off",
@@ -217,6 +217,9 @@
     "window.autoDetectColorScheme": true,
     "remote.SSH.remotePlatform": {
         "ssh root@216.81.245.7 -p 15874 -i ~/.ssh/id_ed25519": "linux",
-        "ssh root@216.81.245.7 -p 37206 -i ~/.ssh/id_ed25519": "linux"
+        "ssh root@216.81.245.7 -p 37206 -i ~/.ssh/id_ed25519": "linux",
+        "ssh root@216.81.245.97 -p 12310 -i ~/.ssh/id_ed25519": "linux",
+        "ssh root@216.81.245.97 -p 10956 -i ~/.ssh/id_ed25519": "linux",
+        "ssh root@216.81.245.97 -p 18700 -i ~/.ssh/id_ed25519": "linux"
     }
 }
