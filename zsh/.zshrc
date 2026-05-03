@@ -25,6 +25,11 @@ ZSH_PLUGINS="$HOME/.zsh/plugins"
 
 source "$HOME/.dotfiles/zsh/aliases.zsh"
 
+# Load dircolors on Linux (macOS ls -G uses LSCOLORS and ignores this)
+if [[ "$(uname)" != "Darwin" ]] && command -v dircolors &>/dev/null; then
+    [[ -f ~/.dircolors ]] && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
 if [[ -d "$HOME/.pyenv" ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"

@@ -8,10 +8,12 @@ ok()   { printf "\033[0;32m[dotfiles]\033[0m %s\n" "$1"; }
 warn() { printf "\033[0;33m[dotfiles]\033[0m %s\n" "$1"; }
 
 INSTALL_VIM=false
+INSTALL_NVIM=false
 INSTALL_OBSIDIAN=false
 for arg in "$@"; do
     case "$arg" in
         --vim)      INSTALL_VIM=true ;;
+        --nvim)     INSTALL_NVIM=true ;;
         --obsidian) INSTALL_OBSIDIAN=true ;;
     esac
 done
@@ -96,6 +98,7 @@ symlink() {
 }
 
 symlink "$DOTFILES_DIR/zsh/.zshrc"                    "$HOME/.zshrc"
+symlink "$DOTFILES_DIR/zsh/dircolors"                  "$HOME/.dircolors"
 symlink "$DOTFILES_DIR/git/.gitconfig"                 "$HOME/.gitconfig"
 symlink "$DOTFILES_DIR/tmux/.tmux.conf"                "$HOME/.tmux.conf"
 symlink "$DOTFILES_DIR/screen/.screenrc"               "$HOME/.screenrc"
@@ -144,6 +147,24 @@ symlink "$DOTFILES_DIR/cursor/skills-cursor" "$CURSOR_DIR/skills-cursor"
 symlink "$DOTFILES_DIR/cursor/mcp.json"      "$CURSOR_DIR/mcp.json"
 symlink_dir_contents "$DOTFILES_DIR/cursor/rules"  "$CURSOR_DIR/rules"
 symlink_dir_contents "$DOTFILES_DIR/cursor/skills" "$CURSOR_DIR/skills"
+
+if [[ "$INSTALL_NVIM" == true ]]; then
+    if ! command -v nvim &>/dev/null; then
+        info "Installing Neovim..."
+        if [[ "$(uname)" == "Darwin" ]]; then
+            brew install neovim
+        elif command -v apt-get &>/dev/null; then
+            sudo apt-get update && sudo apt-get install -y neovim
+        elif command -v snap &>/dev/null; then
+            sudo snap install nvim --classic
+        else
+            warn "Could not detect package manager — install Neovim manually from https://neovim.io"
+        fi
+    fi
+
+    symlink "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
+    info "NeoVim config linked. Open nvim and run :Lazy to install plugins."
+fi
 
 if [[ "$INSTALL_OBSIDIAN" == true ]]; then
     symlink_dir_contents "$DOTFILES_DIR/cursor/optional/obsidian/rules"  "$CURSOR_DIR/rules"
