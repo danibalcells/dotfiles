@@ -1,0 +1,22 @@
+{
+  "theme": "auto",
+  "statusLine": {
+    "type": "command",
+    "command": "bash /root/.claude/statusline-command.sh"
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "TodoWrite",
+      "NotebookEdit"
+    ]
+  }
+}
