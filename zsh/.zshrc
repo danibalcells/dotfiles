@@ -15,6 +15,8 @@ bindkey -e
 bindkey '^ ' autosuggest-accept
 
 export TERM=xterm-256color
+export COLORTERM=truecolor
+export LANG=${LANG:-en_US.UTF-8}
 DISABLE_AUTO_TITLE="true"
 
 ZSH_PLUGINS="$HOME/.zsh/plugins"

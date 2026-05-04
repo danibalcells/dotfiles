@@ -41,6 +41,7 @@ col_red = '#b01010'
 [username]
 show_always = false
 style_user = "fg:fg_text bg:seg_main"
+style_root = "fg:col_red bg:seg_main"
 format = '[ $user]($style)'
 
 [hostname]
@@ -56,7 +57,7 @@ style = "fg:fg_text bg:seg_main"
 format = '[ $path ]($style)'
 
 [git_branch]
-symbol = " "
+symbol = " "
 style = "fg:col_green bg:seg_main"
 format = '[](fg:seg_main)[ $symbol$branch(:$remote_branch) ]($style)'
 truncation_length = 11
@@ -85,7 +86,7 @@ format = '[$symbol$version ](fg:col_green bg:seg_main)'
 
 [cmd_duration]
 min_time = 2000
-format = '[ $duration ](fg:col_yellow bg:seg_main)'
+format = '[](fg:seg_main)[ $duration ](fg:col_yellow bg:seg_main)[](fg:seg_main) '
 
 [time]
 disabled = false

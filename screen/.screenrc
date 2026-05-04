@@ -3,5 +3,6 @@ termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 hardstatus off
 
 term screen-256color
+truecolor on
 
 escape ^Xx
