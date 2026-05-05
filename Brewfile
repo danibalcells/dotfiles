@@ -23,6 +23,8 @@ brew "node"
 brew "pnpm"
 
 brew "starship"
+brew "fzf"
+brew "tree-sitter-cli"
 
 # brew "ffmpeg"
 # brew "imagemagick"

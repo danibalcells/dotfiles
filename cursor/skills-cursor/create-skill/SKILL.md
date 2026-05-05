@@ -1,9 +1,8 @@
 ---
 name: create-skill
 description: >-
-  Guides users through creating effective Agent Skills for Cursor. Use when you
-  want to create, write, or author a new skill, or asks about skill structure,
-  best practices, or SKILL.md format.
+  Create Cursor Agent Skills. Use when authoring a new skill or asking about
+  SKILL.md structure.
 ---
 # Creating Skills in Cursor
 
@@ -19,6 +18,10 @@ Before creating a skill, gather essential information from the user about:
 4. **Key domain knowledge**: What specialized information does the agent need that it wouldn't already know?
 5. **Output format preferences**: Are there specific templates, formats, or styles required?
 6. **Existing patterns**: Are there existing examples or conventions to follow?
+
+### Verbatim text from the user
+
+If the user includes exact wording to use in the skill, respect it and use it **verbatim** in `SKILL.md` (same words, same order). Do not paraphrase, soften, or expand their copy, and do not add unrequested headings or commentary around it.
 
 ### Inferring from Context
 
@@ -71,6 +74,7 @@ Every skill requires a `SKILL.md` file with YAML frontmatter and markdown body:
 ---
 name: your-skill-name
 description: Brief description of what this skill does and when to use it
+disable-model-invocation: true
 ---
 
 # Your Skill Name
@@ -81,6 +85,8 @@ Clear, step-by-step guidance for the agent.
 ## Examples
 Concrete examples of using this skill.
 ```
+
+Default `disable-model-invocation: true` so the skill only loads when named explicitly. Omit it only when the agent should auto-invoke from ambient context.
 
 ### Required Metadata Fields
 

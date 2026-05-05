@@ -22,7 +22,7 @@
     "workbench.editor.tabSizingFixedMaxWidth": 100,
     "vim.vimrc.enable": true,
     "python.venvPath": "~/.virtualenvs",
-    "workbench.iconTheme": "Monokai Pro Light Icons",
+    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
     "terminal.integrated.smoothScrolling": true,
     "workbench.colorCustomizations": {
     //     "terminal.background": "#2C2525",
@@ -76,13 +76,12 @@
     "notebook.output.wordWrap": true,
     "cursor.chat.showSuggestedFiles": true,
     "cursor.aipreview.enabled": true,
-    "workbench.colorTheme": "Monokai Pro Light",
+    "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
     "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Ristretto)",
     "workbench.preferredLightColorTheme": "Monokai Pro Light",
     "window.systemColorTheme": "auto",
     "terminal.integrated.cursorBlinking": true,
     "workbench.preferredHighContrastLightColorTheme": "Default High Contrast",
-    "editor.suggest.showStatusBar": true,
     "editor.inlineSuggest.enabled": false,
     "cursor.composer.renderPillsInsteadOfBlocks": true,
     "files.exclude": {
@@ -220,6 +219,11 @@
         "ssh root@216.81.245.7 -p 37206 -i ~/.ssh/id_ed25519": "linux",
         "ssh root@216.81.245.97 -p 12310 -i ~/.ssh/id_ed25519": "linux",
         "ssh root@216.81.245.97 -p 10956 -i ~/.ssh/id_ed25519": "linux",
-        "ssh root@216.81.245.97 -p 18700 -i ~/.ssh/id_ed25519": "linux"
-    }
+        "ssh root@216.81.245.97 -p 18700 -i ~/.ssh/id_ed25519": "linux",
+        "ssh root@216.81.245.127 -p 19221 -i ~/.ssh/id_ed25519": "linux",
+        "ssh root@216.81.248.128 -p 18995 -i ~/.ssh/id_ed25519": "linux"
+    },
+    "workbench.statusBar.visible": false,
+    "window.titleBarStyle": "native",
+    "git.enabled": false
 }
