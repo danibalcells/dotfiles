@@ -27,7 +27,7 @@ function tmr() {
         return 1
     fi
     local host="$1" session="${2:-main}"
-    ssh "$host" -t "tmux -CC new-session -AD -s '$session'"
+    ssh "$host" -t "tmux -CC new-session -A -s '$session'"
 }
 
 # New tmux window in the current session with a given name.
@@ -44,6 +44,11 @@ function tw() {
 function tt() {
     tmux rename-window "$1"
     tmux rename-session "$1"
+}
+
+# Rename the current window only.
+function trw() {
+    tmux rename-window "$1"
 }
 
 function scr() {
