@@ -12,8 +12,35 @@ function gitclonehere() {
     git remote add origin "$1"
 }
 
-alias tm="tmux new-session -AD -s"
+# Local tmux in iTerm -CC integration mode (attach existing or create).
+# Usage: tm [session]   — session defaults to "main"
+function tm() {
+    local session="${1:-main}"
+    tmux -CC new-session -AD -s "$session"
+}
 
+# Remote tmux in iTerm -CC integration mode over SSH.
+# Usage: tmr <host> [session]   — session defaults to "main"
+function tmr() {
+    if [[ -z "$1" ]]; then
+        echo "usage: tmr <host> [session]" >&2
+        return 1
+    fi
+    local host="$1" session="${2:-main}"
+    ssh "$host" -t "tmux -CC new-session -AD -s '$session'"
+}
+
+# New tmux window in the current session with a given name.
+# Usage: tw <name>
+function tw() {
+    if [[ -z "$1" ]]; then
+        echo "usage: tw <window-name>" >&2
+        return 1
+    fi
+    tmux new-window -n "$1"
+}
+
+# Rename the current window and session to the same name.
 function tt() {
     tmux rename-window "$1"
     tmux rename-session "$1"
