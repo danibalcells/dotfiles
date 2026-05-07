@@ -1,8 +1,9 @@
 {
   "theme": "auto",
+  "skipDangerousModePermissionPrompt": true,
   "statusLine": {
     "type": "command",
-    "command": "bash /root/.claude/statusline-command.sh"
+    "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "permissions": {
     "defaultMode": "acceptEdits",

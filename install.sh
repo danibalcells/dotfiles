@@ -254,6 +254,10 @@ symlink_dir_contents "$DOTFILES_DIR/cursor/skills" "$CURSOR_DIR/skills"
 symlink "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 info "Neovim config linked. Open nvim and let lazy.nvim install plugins."
 
+# Claude Code
+mkdir -p "$HOME/.claude"
+symlink_dir_contents "$DOTFILES_DIR/claude/.claude" "$HOME/.claude"
+
 if [[ "$INSTALL_OBSIDIAN" == true ]]; then
     symlink_dir_contents "$DOTFILES_DIR/cursor/optional/obsidian/rules"  "$CURSOR_DIR/rules"
     symlink_dir_contents "$DOTFILES_DIR/cursor/optional/obsidian/skills" "$CURSOR_DIR/skills"
