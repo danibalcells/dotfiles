@@ -67,7 +67,10 @@ _zbell_check() {
   (( SECONDS - _zbell_start >= ZBELL_THRESHOLD )) && print "\a"
 }
 
+set -o vi
+
 add-zsh-hook preexec _zbell_save_start
 add-zsh-hook precmd  _zbell_check
 
 [[ -f ~/.local.zsh ]] && source ~/.local.zsh
+
