@@ -68,6 +68,8 @@ _zbell_check() {
 }
 
 set -o vi
+bindkey -M viins '^E' end-of-line
+bindkey -M viins '^ ' autosuggest-accept
 
 add-zsh-hook preexec _zbell_save_start
 add-zsh-hook precmd  _zbell_check
